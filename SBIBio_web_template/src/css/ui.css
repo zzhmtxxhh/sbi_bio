@@ -1,0 +1,42 @@
+body{
+  background-color: #fff;
+}
+
+.card{
+  position: relative;
+  background: #ffffff none repeat scroll 0 0;
+  margin: 15px 0;
+  padding :30px;
+  border: 0 solid #e7e7e7;
+  border-radius:5px;
+  box-shadow:0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cd-top.cd-top--show {
+ /* the button becomes visible */
+ visibility: visible;
+ opacity: 1;
+}
+
+.cd-top.cd-top--fade-out {
+ /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+ opacity: .5;
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #27AE61 url("up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+a:hover.back-to-top {
+	background-color: #000;
+}

@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Mxgraph JS -->
+    <script type="text/javascript">
+  		mxBasePath = 'src';
+  	</script>
+  	<script type="text/javascript" src="src/lib/mxclient.js"></script>
+    <script src="src/lib/jquery-3.3.1.min.js"></script>
+    <script src="src/lib/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" ></script>
+    <script src="src/lib/gauge.min.js"></script>
+
+
+
+    <!-- Mxgraph file -->
+    <script type="text/javascript" src="src/js/flowchart.js"></script>
+    <script type="text/javascript" src="src/js/clock.js"></script>
+    <script type="text/javascript" src="src/js/ui.js"></script>
+
+    <script type ="text/javascript" src="src/js/main.js"></script>
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+    <!-- User_defined CSS -->
+    <link rel='stylesheet' href="src/css/ui.css">
+    <link rel="stylesheet" href="src/css/flowchart.css">
+    <link rel="stylesheet" href="src/css/bio_c.css">
+
+
+
+
+    <title>Index</title>
+  </head>
+
+  <body  onload="graph_0(document.getElementById('graphContainer_0')),
+  graph_1(document.getElementById('graphContainer_1')) , graph_2(document.getElementById('graphContainer_2'))
+  ,graph_3(document.getElementById('graphContainer_3')), graph_4(document.getElementById('graphContainer_4'))">
+
+
+
+  <a href="#" class="back-to-top" style="display: block;"></a>
+    <!-- NavBar-------------------------------------------------------------->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" id = "navbar">
+  <a class="navbar-brand" href="#">SBI BioE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item e">
+        <a class="nav-link" href="#">Unit A</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Unit B</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Unit C</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Unit D</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Unit E</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+  <!---End of NavBar----------------------------------------------------->
+
+
+  <!--Contetnt---------------------------------------------------------->
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row card">
+				<div class="col-md-12">
+          <!-- This part is reserved for entire flow chart TODO:1-->
+          <div id="graphContainer_0"
+            style="position:relative;;overflow:hidden;width:100%;height:100%;background:url('src/pic/grid.gif');cursor:default;">
+          </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3 card">
+          <p>The Current time is:</p>
+          <p id="example"></p>
+
+				</div>
+				<div class="col-md-3 card">
+          <h5>
+            Furnace ON/OFF:
+          </h5>
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+
+				</div>
+				<div class="col-md-3 card">
+          <h5>
+            DB count ON/OFF
+          </h5>
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+				</div>
+				<div class="col-md-3 card">
+          <h5>
+            Placeholder for DB count:32767
+          </h5>
+          <button type="button" class="btn btn-success">Reset</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+  <div class="col-md-12 card">
+    <div class="row">
+      <div class = "col-md-6 ">
+        <div id="graphContainer_4"
+          style="position:relative;overflow:hidden;width:100%;height:100%;background:url('src/pic/grid.gif');cursor:default;">
+        </div>
+
+      </div>
+
+      <div class = "col-md-6 ">
+      <h5>Methanol tank</h5>
+      <div class ="d-inline-block">
+      <canvas data-type="linear-gauge"
+        data-width="144"
+        data-height="360"
+        data-border-radius="0"
+        data-bar-begin-circle="false"
+        data-title="Pressure"
+        data-bar-width="65"
+        data-units="P"
+        data-needle-type="line"
+        data-needle-width="3"
+        data-color-needle="rgb(48,129,238)"
+        data-tick-side="left"
+        data-number-side="left"
+        data-needle-side="left"
+        data-color-plate="#222"
+        data-color-major-ticks="#f5f5f5"
+        data-color-minor-ticks="#ddd"
+        data-color-title="#fff"
+        data-color-units="#ccc"
+        data-color-numbers="#eee"
+        data-value="10"
+        data-major-ticks="0,10,20,30,40,50,60,70,80,90,100"
+        data-animation-rule="linear"
+        data-animation-duration="750"
+        data-bar-stroke-width="5"
+        data-value-box-border-radius="0"
+        data-value-text-shadow="false"
+        data-color-bar-progress="rgba(48,129,238,.75)"
+        data-highlights='[ {"from": 50, "to": 100, "color": "rgba(200, 50, 50, .75)"} ]'
+        ></canvas>
+              <h1 class="scale">mass:20g</h1>
+
+      </div>
+
+      <div class = "d-inline-block">
+        <div class = "container">
+          <canvas data-type="radial-gauge"
+                  data-value="20"
+                  data-width="200"
+                  data-height="300"
+                  data-bar-width="20"
+                  data-bar-shadow="1"
+                  data-color-plate="#222"
+                  data-color-major-ticks="#f5f5f5"
+                  data-color-minor-ticks="#ddd"
+                  data-color-title="#fff"
+                  data-color-units="#ccc"
+                  data-color-numbers="#eee"
+                  data-color-bar-progress="rgba(48,129,238,.75)"
+                  data-border-shadow-width="0"
+                  data-border-inner-width="0"
+                  data-border-outer-width="0"
+                  data-border-middle-width="0"
+                  data-value-box-stroke="0"
+                  data-value-text-shadow="0"
+                  data-highlights='[ {"from": 60, "to": 100, "color": "rgba(200, 50, 50, .75)"} ]'
+                  data-needle="false"
+          ></canvas>
+<br>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+</div>
+      </div>
+</div>
+
+
+</div>
+  </div>
+
+
+
+  <div class="col-md-12 card">
+    <div class = "row">
+    <div class="col-md-6 ">
+      <div id="graphContainer_3"
+        style="position:relative;overflow:hidden;width:100%;height:100%;background:url('src/pic/grid.gif');cursor:default;">
+      </div>
+    </div>
+
+    <div class="col-md-6 ">
+    <div class ="d-inline-block">
+      <h5>Conola Tank:</h5>
+      <canvas data-type="linear-gauge"
+        data-width="144"
+        data-height="360"
+        data-border-radius="0"
+        data-bar-begin-circle="false"
+        data-title="Pressure"
+        data-bar-width="65"
+        data-units="P"
+        data-needle-type="line"
+        data-needle-width="3"
+        data-color-needle="rgb(48,129,238)"
+        data-tick-side="left"
+        data-number-side="left"
+        data-needle-side="left"
+        data-color-plate="#222"
+        data-color-major-ticks="#f5f5f5"
+        data-color-minor-ticks="#ddd"
+        data-color-title="#fff"
+        data-color-units="#ccc"
+        data-color-numbers="#eee"
+        data-value="10"
+        data-major-ticks="0,10,20,30,40,50,60,70,80,90,100"
+        data-animation-rule="linear"
+        data-animation-duration="750"
+        data-bar-stroke-width="5"
+        data-value-box-border-radius="0"
+        data-value-text-shadow="false"
+        data-color-bar-progress="rgba(48,129,238,.75)"
+        data-highlights='[ {"from": 50, "to": 100, "color": "rgba(200, 50, 50, .75)"} ]'
+        ></canvas>
+            <h1 class="scale">mass:20g</h1>
+
+    </div>
+
+    <div class = "d-inline-block">
+      <div class = "container">
+        <canvas data-type="radial-gauge"
+                data-value="20"
+                data-width="200"
+                data-height="300"
+                data-bar-width="20"
+                data-bar-shadow="1"
+                data-color-plate="#222"
+                data-color-major-ticks="#f5f5f5"
+                data-color-minor-ticks="#ddd"
+                data-color-title="#fff"
+                data-color-units="#ccc"
+                data-color-numbers="#eee"
+                data-color-bar-progress="rgba(48,129,238,.75)"
+                data-border-shadow-width="0"
+                data-border-inner-width="0"
+                data-border-outer-width="0"
+                data-border-middle-width="0"
+                data-value-box-stroke="0"
+                data-value-text-shadow="0"
+                data-highlights='[ {"from": 60, "to": 100, "color": "rgba(200, 50, 50, .75)"} ]'
+                data-needle="false"
+        ></canvas>
+<br>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<label class="badge badge-primary">By pass :</label>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+  </div>
+    </div>
+
+
+</div>
+</div>
+
+  </div>
+
+<div class="col-md-12 card">
+  <div class="row">
+  <div class="col-md-6  ">
+    <!-- This part is reserved for haating tube -->
+    <div id="graphContainer_1"
+  		style="position:relative;width:100%;height:100%;background:url('src/pic/grid.gif');cursor:default;">
+  	</div>
+  </div>
+
+
+  <div class="col-md-6  ">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th scope="col">Name</th>
+      <th scope="col">Value</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-md-12 card">
+  <div class = "row">
+  <div class="col-md-6  ">
+    <!-- This part is reserved for haating tube -->
+    <div id="graphContainer_2"
+  		style="position:relative;width:100%;height:100%;background:url('src/pic/grid.gif');cursor:default;">
+  	</div>
+  </div>
+  <div class="col-md-6  ">
+
+    <!-- This part is reserved for haating tube -->
+  </div>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+  </body>
+</html>
